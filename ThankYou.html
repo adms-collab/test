@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Thank you</title>
+	<!-- XMPie XMPL library -->
+	<link href="https://ajax.xmcircle.com/ajax/libs/xmpl/1.9.1/xmp/css/xmp.css" rel="stylesheet" media="screen">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://ajax.xmcircle.com/ajax/libs/xmpl/1.9.1/xmp/js/xmp.min.js"></script>
+
+	<script src="./xmpcfg.js"></script>
+</head>
+<body ng-app="xmp.app" ng-controller="XMPPersonalizedPage" xmp-cloak xmp-tracking-page-name="Thank you">
+<h1> XMPL Test </h1><br>
+Hello <strong> {{xmp.r.Name}}</strong>,
+<br>
+<br>
+Thank you for submitting the data!
+<br>
+<br>
+<span xmp-show="xmp.r.Pet!=''">The pet that we have in our records is: <strong>{{xmp.r.Pet}}</strong>.</span>
+<span xmp-show="xmp.r.Pet==''">We have no pet in our records.</span>
+<br>
+<div xmp-show="xmp.r.Pet!=''">
+	<br>
+	And it probably looks like this:<br>
+	<img xmp-image-asset="xmp.r.PetImage"/>
+</div>
+<br>
+<br>
+<a xmp-href="{{xmp.r['XMPie.PDF.P1']}}">Produce PDF on demand</a>
+</body>
+</html>
